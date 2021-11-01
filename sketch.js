@@ -1,7 +1,7 @@
 //https://www.openprocessing.org/sketch/157576
 let pg;
 let trail;
-var num = 2000;
+var num = 5000;
 var noiseScale = 500, noiseStrength = 1;
 var particles = [num];
 var debrises = []; //I KNOW ITS NOT GRAMMATICALLY CORRECT BUT CODE CLARITY THANKS
@@ -12,17 +12,21 @@ let unitSize = 100;
 var currentSeed = 0;
 // var bigWidth = 2880;
 // var bigHeight = 2010;
-var isImaging = true;
+var isImaging = false;
 function setup() {
     // for (let i = 0; i < 3; i++){
         
     // }
+    createCanvas(windowWidth, windowHeight);
+
     noiseSeed(542);
     background(0);
     if (isImaging){
         pixelDensity(4.0);
     }
-    createCanvas(windowWidth, windowHeight);
+    else{
+        pixelDensity(1.0);
+    }
     noStroke();
     for (let i = 0; i < num; i++) {
         var angle = 0; //any value to initialize
