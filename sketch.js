@@ -99,6 +99,7 @@ function draw() {
 
     // circle(mouseX, mouseY, 75)
     if (frameCount < 5){
+        
         background(0);
     }
     // background(0);
@@ -126,7 +127,7 @@ function draw() {
     
     image(trail, 0,0);
     image(pg, 0, 0);
-
+    
 }
 class Debris {
     constructor(_x, _y, _color){
